@@ -328,9 +328,32 @@ h3 {
   background: var(--soft);
 }
 
+.benefit-showcase {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.05fr) minmax(0, 0.95fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.cooling-photo {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.cooling-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+
 .benefit-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 16px;
 }
 
@@ -433,7 +456,8 @@ h3 {
 
 @media (max-width: 980px) {
   .hero,
-  .order-section {
+  .order-section,
+  .benefit-showcase {
     grid-template-columns: 1fr;
   }
 
@@ -441,8 +465,8 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .benefit-grid {
-    grid-template-columns: 1fr;
+  .cooling-photo img {
+    min-height: 280px;
   }
 }
 
