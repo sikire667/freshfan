@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FreshFan - Ventilateurs portables</title>
+    <meta
+      name="description"
+      content="Boutique dropshipping de ventilateurs portables, mini ventilateurs rechargeables, ventilateurs de cou et ventilateurs de bureau."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#accueil" aria-label="FreshFan accueil">
+        <span class="brand-mark">F</span>
+        <span>FreshFan</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#produits">Produits</a>
+        <a href="#livraison">Livraison</a>
+        <a href="#avis">Avis</a>
+      </nav>
+
+      <button class="cart-button" type="button" data-open-cart>
+        Panier <span id="cart-count">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="accueil">
+        <div class="hero-copy">
+          <p class="eyebrow">Boutique special ete</p>
+          <h1>Ventilateurs portables pour rester frais partout.</h1>
+          <p class="hero-text">
+            Lance ta boutique avec une selection simple: produits legers,
+            prix accessibles, livraison suivie et commande rapide par WhatsApp.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#produits">Voir les produits</a>
+            <a class="secondary-link" href="#livraison">Comment ca marche</a>
+          </div>
+          <div class="trust-row" aria-label="Avantages">
+            <span>Livraison 7-15 jours</span>
+            <span>Paiement a la reception</span>
+            <span>Support WhatsApp</span>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-label="Collection de ventilateurs portables">
+          <img src="assets/fan-products.png" alt="Ventilateurs portables FreshFan" />
+        </div>
+      </section>
+
+      <section class="promo-band" aria-label="Offre">
+        <span>Pack ete</span>
+        <strong>-15% des 2 articles</strong>
+        <span>Livraison offerte a partir de 399 DH</span>
+      </section>
+
+      <section class="section" id="produits">
+        <div class="section-heading">
+          <p class="eyebrow">Catalogue</p>
+          <h2>Produits faciles a vendre en dropshipping</h2>
+          <p>
+            Selectionnee pour un cout de livraison bas: compacte, legere et
+            utile pendant les grosses chaleurs.
+          </p>
+        </div>
+
+        <div class="filters" aria-label="Filtres produits">
+          <button class="filter active" type="button" data-filter="all">Tous</button>
+          <button class="filter" type="button" data-filter="portable">Portable</button>
+          <button class="filter" type="button" data-filter="bureau">Bureau</button>
+          <button class="filter" type="button" data-filter="pack">Packs</button>
+        </div>
+
+        <div class="product-grid" id="product-grid"></div>
+      </section>
+
+      <section class="split-section" id="livraison">
+        <div>
+          <p class="eyebrow">Process</p>
+          <h2>Commande simple, sans stock au depart.</h2>
+          <p>
+            Le client commande sur ton site, tu confirmes sur WhatsApp, puis tu
+            passes la commande chez ton fournisseur. Commence avec peu de
+            produits et teste la demande avant d'acheter du stock.
+          </p>
+        </div>
+        <div class="steps">
+          <article>
+            <span>01</span>
+            <h3>Le client choisit</h3>
+            <p>Il ajoute un ventilateur au panier et envoie la commande.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Tu confirmes</h3>
+            <p>Tu verifies la ville, la couleur et le mode de paiement.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Tu expedies</h3>
+            <p>Tu commandes au fournisseur ou tu envoies depuis ton mini-stock.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="avis">
+        <div class="section-heading compact">
+          <p class="eyebrow">Confiance</p>
+          <h2>Ce que les clients veulent voir</h2>
+        </div>
+        <div class="proof-grid">
+          <article>
+            <strong>Autonomie claire</strong>
+            <p>Indique les heures d'utilisation et le temps de recharge.</p>
+          </article>
+          <article>
+            <strong>Photos reelles</strong>
+            <p>Ajoute des videos courtes pour montrer la puissance du vent.</p>
+          </article>
+          <article>
+            <strong>Livraison transparente</strong>
+            <p>Annonce un delai realiste pour eviter les reclamations.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+      <div class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <div class="cart-head">
+          <h2 id="cart-title">Ton panier</h2>
+          <button class="icon-button" type="button" data-close-cart aria-label="Fermer">X</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-empty" id="cart-empty">Ton panier est vide.</div>
+        <div class="cart-summary">
+          <div>
+            <span>Total</span>
+            <strong id="cart-total">0 DH</strong>
+          </div>
+          <button class="checkout-button" type="button" id="checkout-button">
+            Commander sur WhatsApp
+          </button>
+          <small>Remplace le numero WhatsApp dans <code>app.js</code>.</small>
+        </div>
+      </div>
+    </aside>
+
+    <script src="app.js"></script>
+  </body>
+</html>
