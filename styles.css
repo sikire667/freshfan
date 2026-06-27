@@ -549,13 +549,14 @@ html[dir="rtl"] .header-actions {
 }
 
 html[dir="rtl"] .benefit-content {
-  margin-right: auto;
-  margin-left: 0;
+  margin-right: 0;
+  margin-left: auto;
+  text-align: right;
 }
 
 html[dir="rtl"] .cooling-photo::after {
   background:
-    linear-gradient(270deg, rgba(240, 250, 247, 0.08), rgba(240, 250, 247, 0.78) 58%, rgba(240, 250, 247, 0.95)),
+    linear-gradient(90deg, rgba(240, 250, 247, 0.02), rgba(240, 250, 247, 0.5) 58%, rgba(240, 250, 247, 0.94)),
     linear-gradient(180deg, rgba(79, 185, 159, 0.06), rgba(47, 134, 199, 0.08));
 }
 
@@ -643,5 +644,9 @@ html[dir="rtl"] select {
   html[dir="rtl"] .header-actions {
     margin-right: auto;
     margin-left: 0;
+  }
+
+  html[dir="rtl"] .benefit-content {
+    margin: 0 auto;
   }
 }
